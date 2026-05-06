@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar cuenta — Pockee</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #F5F3EF;
+            --surface: #FFFFFF;
+            --primary: #FF6B3D;
+            --text: #1A1A1A;
+            --text-secondary: #6B6B6B;
+            --text-muted: #9B9B9B;
+            --border: #EAEAEA;
+            --danger: #E53935;
+            --radius: 16px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+        .header {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            padding: 24px 0;
+        }
+        .header-content {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo { font-size: 24px; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 48px 24px 96px;
+        }
+        h1 { font-size: 32px; font-weight: 700; margin-bottom: 12px; }
+        .subtitle { font-size: 15px; color: var(--text-secondary); margin-bottom: 32px; }
+        .card {
+            background: var(--surface);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+        h2 { font-size: 18px; font-weight: 700; margin-bottom: 16px; }
+        h3 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; }
+        p { font-size: 15px; color: var(--text-secondary); margin-bottom: 12px; }
+        .steps { counter-reset: step; list-style: none; padding: 0; }
+        .steps li {
+            counter-increment: step;
+            padding: 12px 0 12px 48px;
+            position: relative;
+            font-size: 15px;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border);
+        }
+        .steps li:last-child { border-bottom: none; }
+        .steps li::before {
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            width: 32px;
+            height: 32px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .warning-box {
+            background: #FFF3F0;
+            border-left: 3px solid var(--danger);
+            border-radius: var(--radius);
+            padding: 20px 24px;
+            margin: 24px 0;
+        }
+        .warning-box p { color: var(--danger); font-weight: 500; margin: 0; }
+        .data-list { list-style: none; padding: 0; }
+        .data-list li {
+            padding: 8px 0;
+            font-size: 15px;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border);
+        }
+        .data-list li:last-child { border-bottom: none; }
+        .data-list li::before { content: "✓ "; color: var(--primary); font-weight: 700; }
+        .contact-box {
+            background: var(--surface);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            padding: 24px;
+            text-align: center;
+        }
+        .contact-box a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+        }
+        .footer p { font-size: 13px; color: var(--text-muted); }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="header-content">
+        <a href="index.html" class="logo">Pockee</a>
+    </div>
+</div>
+
+<div class="container">
+
+    <h1>Eliminar tu cuenta</h1>
+    <p class="subtitle">Aquí te explicamos cómo eliminar tu cuenta de Pockee y qué datos se borrarán.</p>
+
+    <div class="card">
+        <h2>Pasos para eliminar tu cuenta</h2>
+        <ol class="steps">
+            <li>Abre la app <strong>Pockee</strong> en tu dispositivo</li>
+            <li>Ve a la pestaña <strong>Perfil</strong> (último ícono en la barra inferior)</li>
+            <li>Toca la opción <strong>Cerrar sesión</strong></li>
+            <li>Para la eliminación completa de tu cuenta y datos, envía un correo a <strong>tucorreo@ejemplo.com</strong> con el asunto "Eliminar mi cuenta" indicando el correo asociado a tu cuenta</li>
+            <li>Tu cuenta y todos los datos asociados serán eliminados en un plazo máximo de <strong>30 días calendario</strong></li>
+        </ol>
+    </div>
+
+    <div class="warning-box">
+        <p>⚠️ La eliminación de tu cuenta es permanente e irreversible. Una vez eliminada, no será posible recuperar tus datos.</p>
+    </div>
+
+    <div class="card">
+        <h2>Datos que se eliminan</h2>
+        <p>Al eliminar tu cuenta, se borrarán de forma permanente los siguientes datos:</p>
+        <ul class="data-list">
+            <li>Información personal (nombre, correo electrónico, avatar)</li>
+            <li>Todas las transacciones (gastos e ingresos)</li>
+            <li>Categorías personalizadas</li>
+            <li>Etiquetas</li>
+            <li>Registros de pagos recurrentes</li>
+            <li>Historial de pagos</li>
+            <li>Preferencias de la aplicación</li>
+            <li>Credenciales de acceso y tokens de autenticación</li>
+        </ul>
+
+        <h3>Datos que NO se conservan</h3>
+        <p>Pockee no retiene ningún dato personal después de la eliminación de la cuenta. La eliminación es completa y definitiva.</p>
+    </div>
+
+    <div class="card">
+        <h2>Plazo de eliminación</h2>
+        <p>Los datos serán eliminados en un plazo máximo de <strong>30 días calendario</strong> a partir de la recepción de la solicitud, conforme a lo establecido en la <strong>Ley 1581 de 2012</strong> de Protección de Datos Personales de Colombia.</p>
+    </div>
+
+    <div class="contact-box">
+        <h2>¿Necesitas ayuda?</h2>
+        <p>Si tienes preguntas sobre la eliminación de tu cuenta, contáctanos:</p>
+        <p style="margin-top: 12px;"><a href="mailto:tucorreo@ejemplo.com">tucorreo@ejemplo.com</a></p>
+    </div>
+
+    <div class="footer">
+        <p>© 2026 ByRaul Dev — Pockee. Todos los derechos reservados.</p>
+        <p style="margin-top: 4px;"><a href="index.html" style="color: #FF6B3D; text-decoration: none;">Política de Privacidad</a></p>
+    </div>
+
+</div>
+
+</body>
+</html>
